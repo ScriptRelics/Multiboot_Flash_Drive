@@ -28,7 +28,7 @@ Format the new partition in the ext4 file system and name it `persistence`
 
 You should now have a USB flash drive with 2 partitions, one named persistence in the ext4 file format.  
 
-- The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.
+- The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.  
 
 
 ## [Install with Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)  
@@ -68,9 +68,13 @@ Click Finish.
 
 From here you can eject your USB and/or boot into your new portable operating system.
 
-### Manually Editing the Boot Menu
 
-You can edit the boot menu to change the auto start time or the selected system. There is also a scrip that can do this for you, [HERE]().
+
+### Editing the Boot Menu
+
+You can edit the boot menu to change the auto start time or the selected system. My scrip should do this for you IF you used kali-linux-2016.2-amd64 that I installed, [HERE](./Multiboot_Flash_Drive/Kali-Persistence-setup.sh). This script also updates your persistence and the entire system.  
+
+If the script cant work for you, you can make a manual edit to the boot menu
 
 ![Yumi Boot Menu](https://www.pendrivelinux.com/wp-content/uploads/YUMI-Boot-Menu.png "Yumi Boot Menu")
 
@@ -106,9 +110,13 @@ APPEND /multiboot/kali-linux-2016.2-amd64/isolinux
 MENU DEFAULT
 ```
 This will select the kali-linux-2016.2-amd64 that I installed earlier.
-- You will need to modify this to what you installed. 
+- You will need to modify `kali-linux-2016.2-amd64` to what you installed. 
 
 Save the `syslinux.cfg` file.  
+
+
+
+
 
 Test your USB drive by booting into the Yumi Menu.  
 
