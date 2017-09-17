@@ -23,10 +23,10 @@ Things to keep in mind are FAT32 only supports individual files up to 4GB in siz
 Resize the main partition to allow a new partition with at least 4GB of space. 
 - Out of the 60BG my USB drive had available, I gave my persistence drive 18GB.  
 
-Format the new partition in the ext4 file system and name it `persistence`  
+Format the new partition in the ext3 file system and name it `persistence`  
 - The new partition is case sensitive, use lower case.  
 
-You should now have a USB flash drive with 2 partitions, one named persistence in the ext4 file format.  
+You should now have a USB flash drive with 2 partitions, one named persistence in the ext3 file format.  
 
 - The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.  
 
@@ -68,9 +68,10 @@ Click Finish.
 
 From here you can eject your USB and/or boot into your new portable operating system.
 
+When the menu pops up, Select ``
 
 
-### Editing the Boot Menu
+### Editing the Boot Menu _Optional_
 
 You can edit the boot menu to change the auto start time or the selected system. My scrip should do this for you IF you used kali-linux-2016.2-amd64 that I installed, [HERE](./Multiboot_Flash_Drive/Kali-Persistence-setup.sh). This script also updates your persistence and the entire system.  
 
