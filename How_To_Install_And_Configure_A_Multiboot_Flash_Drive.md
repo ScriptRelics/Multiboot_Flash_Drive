@@ -1,25 +1,29 @@
-# How to install and configure a multiboot flash drive with Kali Linux
+# How to install and configure a multiboot USB flash drive with Kali Linux
 
 ## Formating the USB Drive for a clean Kali install with persistance.
 
-If you want to have persistence for your Kali Linux then you are going to need to format the drive with an extra partition.
+If you want to have persistence for your Kali Linux then you are going to need to format the drive with an extra partition.  
 
 A partition tool like [MiniTool Partition Wizard](https://www.partitionwizard.com/download.html) (Windows) or gparted (Linux) will be needed to create the persistence partition.  
 
-Delete and format the entire USB flash drive in the fat32 file system to wipe it clean. I named mine `Multiboot` but this is optional.
+Delete and format the entire USB flash drive in the fat32 file system to wipe it clean.  
+- I named mine `Multiboot` but this is optional because Yumi will do this for you automatically later.  
 
 <details>
-  <summary>Why Fat32 and not NTFS?  </summary>
+  <summary> Why Fat32 and not NTFS?  </summary>
   <p>Microsoft created NTFS and it will not be able to be used for Linux operating systems. Plus, there’s really no reason to use NTFS on USB sticks and SD cards unless you really need support for files over 4GB in size.  
 
 Things to keep in mind are FAT32 only supports individual files up to 4GB in size and volumes up to 2TB in size. The file system corruption can happen much easier. FAT32 doesn’t support file permissions.  
   </p>
 </details>
 
+
 Resize the main partition to allow a new partition with at least 4GB of space. 
 - Out of the 60BG my USB drive had available, I gave my persistence drive 18GB.  
-Format the new partition in the ext4 file system and name it `persistence`.  
+
+Format the new partition in the ext4 file system and name it `persistence`  
 - The new partition is case sensitive, use lower case.  
+
 You should now have a USB flash drive with 2 partitions, one named persistence in the ext4 file format.  
 
 - The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.
@@ -31,7 +35,7 @@ YUMI works much like the [Universal USB Installer](https://www.pendrivelinux.com
 
 Download the portable [Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/) installer.
 
-Open up Yumi.
+Open up Yumi and agree to the license agreement.
 
 ![Yumi](https://www.pendrivelinux.com/wp-content/uploads/YUMI-Multiboot-USB-Creator.png "Yumi")
 
