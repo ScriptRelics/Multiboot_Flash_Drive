@@ -10,7 +10,7 @@ Open up Yumi.
 
 ### Clean Install 
 
-Select your USB device. on step 1  
+Select your USB device. Step 1  
 - Double and triple check you have the right USB selected.  
 
 ##### Optional reformat:  
@@ -28,14 +28,16 @@ Select: "Fat32 format K: (Wipes Drive)"
 >Things to keep in mind are FAT32 only supports individual files up to 4GB in size and volumes up to 2TB in size. The file system corruption can happen much easier. FAT32 doesn’t support file permissions.  
 
 
-Select a Distribution Step 2  
-- Kali (Penetration Testing) can be [downloaded Here](https://www.kali.org/downloads/).
+Select a Distribution. Step 2  
+- Kali (Penetration Testing). It can be [downloaded Here at kali.org](https://www.kali.org/downloads/).
 
 
 Browse and select the ISO. Step 3  
 
 Click Create.  
-- Accept your USB fate and click yes.  
+- Accept your USB fate and click yes on the warning popup.  
 
-Wait  
+Wait...  
+- 7zip and other popups may appear  
+
 
