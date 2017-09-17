@@ -1,6 +1,6 @@
-How to install and configure a multiboot flash drive with Kali Linux
+# How to install and configure a multiboot flash drive with Kali Linux
 
-### Formating the Drive for a clean install and persistance.
+## Formating the USB Drive for a clean Kali install with persistance.
 
 If you want to have persistence for your Kali Linux then you are going to need to format the drive with an extra partition.
 
@@ -16,15 +16,16 @@ Things to keep in mind are FAT32 only supports individual files up to 4GB in siz
   </p>
 </details>
 
-Resize the main partition to allow another partition with at least 4GB of space. Out of the 60BG available, I gave my persistence drive 18GB.  
+Resize the main partition to allow a new partition with at least 4GB of space. 
+- Out of the 60BG my USB drive had available, I gave my persistence drive 18GB.  
 Format the new partition in the ext4 file system and name it `persistence`.  
 - The new partition is case sensitive, use lower case.  
 You should now have a USB flash drive with 2 partitions, one named persistence in the ext4 file format.  
 
-- The bigger the drive, the longer the format will be. I waited 25 min for my 60g flash drive.
+- The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.
 
 
-# [Install with Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)  
+## [Install with Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)  
 
 YUMI works much like the [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/), except it can be used to add more than one distribution to run Live from your Thumb Drive.
 
