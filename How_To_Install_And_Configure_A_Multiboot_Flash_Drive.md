@@ -7,17 +7,18 @@ If you want to have persistence for your Kali Linux then you are going to need t
 A partition tool like [MiniTool Partition Wizard](https://www.partitionwizard.com/download.html) (Windows) or gparted (Linux) will be needed to create the persistence partition.  
 
 Delete and format the entire USB flash drive in the fat32 file system to wipe it clean.  
-- I named mine `Multiboot` but this is optional because Yumi will do this for you automatically later.  
 
 <details>
-  <summary> Why Fat32 and not NTFS?  </summary>
+    <summary> Why Fat32 and not NTFS?  </summary>
   <p>Microsoft created NTFS and it will not be able to be used for Linux operating systems. Plus, there’s really no reason to use NTFS on USB sticks and SD cards unless you really need support for files over 4GB in size.  
 
 Things to keep in mind are FAT32 only supports individual files up to 4GB in size and volumes up to 2TB in size. The file system corruption can happen much easier. FAT32 doesn’t support file permissions.  
+
   </p>
 </details>
+- I named mine `Multiboot` but this is optional because Yumi will do this for you automatically later.  
 
-
+  
 Resize the main partition to allow a new partition with at least 4GB of space. 
 - Out of the 60BG my USB drive had available, I gave my persistence drive 18GB.  
 
