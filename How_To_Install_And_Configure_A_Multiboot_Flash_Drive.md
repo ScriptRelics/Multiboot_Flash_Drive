@@ -8,14 +8,16 @@ Open up Yumi.
 
 ![Yumi](https://www.pendrivelinux.com/wp-content/uploads/YUMI-Multiboot-USB-Creator.png "Yumi")
 
-#### Clean Install 
+### Clean Install 
 
 Select your USB device. on step 1  
-    Double and triple check you have the right USB selected.  
+- Double and triple check you have the right USB selected.  
 
-#####Optional reformat:  
-- You might want to reformat the drive first. Here is how:  
+##### Optional reformat:  
+You might want to reformat the drive first. Here is how:  
+
 Select: "Fat32 format K: (Wipes Drive)"  
+
 - Your letter dive may be different.  
 - Selecting it will change to "We Will Fat32 Format K:"  
 
