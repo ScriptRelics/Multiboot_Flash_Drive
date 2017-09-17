@@ -54,14 +54,14 @@ Select a Distribution. Step 2
 Browse and select the ISO. Step 3  
 
 Click Create.  
-- Accept your USB fate and click yes on the warning popup.  
+- Accept your USB fate and click yes on the warning pop-up.  
 
 Wait for Yumi to finish... 
-- 7zip and other popups may appear  
+- 7zip and other pop-ups may appear  
 
-When you see "All Finsihed, Process is Complete!" Click Next.  
+When you see `All Finished, Process is Complete!` Click Next.  
 
-You will be promped "Would you like to add more ISOs/Distros Now?" 
+You will be prompted `Would you like to add more ISOs/Distros Now?` 
 - Click Yes if you want to add another Operating system. 
 - Click No if you are finished.  
 
