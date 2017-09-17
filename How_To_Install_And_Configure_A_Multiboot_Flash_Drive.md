@@ -45,10 +45,10 @@ Open up Yumi and agree to the license agreement.
 
 ### Clean Install 
 
-Select your USB device. Step 1  
+Select your USB device. Step 1 
 - Double and triple check you have the right USB selected.  
 
-Select a Distribution. Step 2  
+Select a Distribution. Step 2 
 - Kali (Penetration Testing). It can be [downloaded Here at kali.org](https://www.kali.org/downloads/).
 
 Browse and select the ISO. Step 3  
@@ -56,7 +56,7 @@ Browse and select the ISO. Step 3
 Click Create.  
 - Accept your USB fate and click yes on the warning popup.  
 
-Wait for Yumi to finish...  
+Wait for Yumi to finish... 
 - 7zip and other popups may appear  
 
 When you see "All Finsihed, Process is Complete!" Click Next.  
@@ -67,17 +67,17 @@ You will be promped "Would you like to add more ISOs/Distros Now?"
 
 Click Finish.  
 
-From here you can eject your USB and/or boot into your new portable operating system.
+From here you can eject your USB and/or boot into your new portable operating system. 
 
-- Make sure the computer is set to boot from USB. Check the BIOS.
+- Make sure the computer is set to boot from USB. Check the BIOS.  
 
 When the menu pops up, move the selection down to Select the `System Tools` menu  
 
 Select the Kali-Linux Operating System  
 
-This will take you to the Kali Menu. Select `Live USB Persistence`  
+This will take you to the Kali Menu. Select `Live USB Persistence` 
 
-- This will bring you to the Kali Desktop
+- This will bring you to the Kali Desktop.  
 
 ### Setting Persistence
 
@@ -96,14 +96,18 @@ echo "/ union" > /mnt/MYUSB/persistence.conf
 umount /dev/sdb2 /mnt/MYUSB
 ```
 
-You are done, But I would suggest that you update the system.  
+You are done, but I would suggest that you update the system.  
 
 ```sh
 apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 ```
 - This will take a LONG time.  
 
-Enjoy Kali. Check out my Optional edits and tweaks HERE.
+Enjoy Kali.  
+
+More info coming soon. 
+You may want to edit the boot menu. Check out my guide [HERE]().
+Check out my Optional edits and tweaks [HERE]().  
 
 
 
