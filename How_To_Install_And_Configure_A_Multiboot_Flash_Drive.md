@@ -8,6 +8,8 @@ A partition tool like [MiniTool Partition Wizard](https://www.partitionwizard.co
 
 Delete and format the entire USB flash drive in the fat32 file system to wipe it clean.  
 
+- If you are formating in Windows, make sure the partitions are primary and NOT logical. 
+
 <details>  
     <summary> Why Fat32 and not NTFS?  </summary>  
   <p>Microsoft created NTFS and it will not be able to be used for Linux operating systems. Plus, there’s really no reason to use NTFS on USB sticks and SD cards unless you really need support for files over 4GB in size.  
@@ -68,8 +70,55 @@ Click Finish.
 
 From here you can eject your USB and/or boot into your new portable operating system.
 
-When the menu pops up, Select ``
+- Make sure the computer is set to boot from USB. Check the BIOS.
 
+When the menu pops up, move the selection down to Select the `System Tools` menu  
+
+Select the Kali-Linux Operating System  
+
+This will take you to the Kali Menu. Select `Live USB Persistence`  
+
+- This will bring you to the Kali Desktop
+
+### Setting Persistence
+
+Now is a good time to run the install.sh script  
+Open a terminal and mount the current USB drive
+
+Type this in the Terminal.  
+```sh
+#Make a folder to mount to
+mkdir /mnt/MYUSB1
+#Mount the USB to a folder
+mount /dev/sdb1 /mnt/MYUSB1
+#Copy the shell file to the desktop
+cp /mnt/MYUSB1/Kali-Persistence-setup.sh /root/Desktop/
+#Run the file
+. /root/DesktopKali-Persistence-setup.sh 
+```
+This will automatically fix the bootloader, set persistance and restart to a fully persistant Kali Linux.  
+
+It will ask to restart.  
+
+After restart connect to a network and run the script again  
+
+It will update the system and restart the computer again.  
+
+
+### Manual
+
+or do it manually  
+
+Finish the setup by mounting the persistence partition and join it to the conif file.
+
+Open a terminal and type:  
+
+```sh
+mkdir -p /mnt/my_usb
+mount /dev/mapper/my_usb /mnt/my_usb
+echo "/ union" > /mnt/my_usb/persistence.conf
+umount /dev/mapper/my_usb
+```
 
 ### Editing the Boot Menu _Optional_
 
