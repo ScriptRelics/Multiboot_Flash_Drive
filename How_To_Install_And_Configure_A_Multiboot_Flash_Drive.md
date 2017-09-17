@@ -6,7 +6,7 @@ If you want to have persistence for your Kali Linux then you are going to need t
 
 A partition tool like [MiniTool Partition Wizard](https://www.partitionwizard.com/download.html) (Windows) or gparted (Linux) will be needed to create the persistence partition.  
 
-Delete and format the entire USB flash drive in the fat32 file system to wipe it clean.  
+Delete and format the entire USB flash drive to `primary` in the `fat32` file system to wipe it clean.  
 
 - If you are formating in Windows, make sure the partitions are primary and NOT logical. 
 
@@ -22,13 +22,13 @@ Things to keep in mind are FAT32 only supports individual files up to 4GB in siz
 - I named mine `Multiboot` but this is optional because Yumi will do this for you automatically later.  
 
 
-Resize the main partition to allow a new partition with at least 4GB of space. 
+Resize the main partition to allow a new partition with at least 6GB of space. 
 - Out of the 60BG my USB drive had available, I gave my persistence drive 18GB.  
 
-Format the new partition in the ext3 file system and name it `persistence`  
+Format the new partition in the ext4 file system and name it `persistence`  
 - The new partition is case sensitive, use lower case.  
 
-You should now have a USB flash drive with 2 partitions, one named persistence in the ext3 file format.  
+You should now have a USB flash drive with 2 partitions, one named persistence in the ext4 file format.  
 
 - The bigger the drive, the longer the format will be. I waited 25 min for my 60g USB flash drive.  
 
@@ -50,7 +50,6 @@ Select your USB device. Step 1
 
 Select a Distribution. Step 2  
 - Kali (Penetration Testing). It can be [downloaded Here at kali.org](https://www.kali.org/downloads/).
-
 
 Browse and select the ISO. Step 3  
 
@@ -99,11 +98,12 @@ umount /dev/sdb2 /mnt/MYUSB
 
 You are done, But I would suggest that you update the system.  
 
-```
+```sh
 apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 ```
+- This will take a LONG time.  
 
-Enjoy. Check out my Optional edits and tweaks HERE.
+Enjoy Kali. Check out my Optional edits and tweaks HERE.
 
 
 
