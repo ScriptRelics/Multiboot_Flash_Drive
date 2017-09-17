@@ -1,4 +1,4 @@
-# [Install Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)  
+# [Install with Yumi](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)  
 
 YUMI works much like Universal USB Installer, except it can be used to add more than one distribution to run Live from your Thumb Drive.
 
@@ -39,5 +39,61 @@ Click Create.
 
 Wait...  
 - 7zip and other popups may appear  
+- The bigger the drive, the longer the format will be. I waited 25 min for my 60g flash drive. 
+
+When you see "All Finsihed, Process is Complete!" Click Next.  
+
+You will be promped "Would you like to add more ISOs/Distros Now?" 
+- Click Yes if you want to add another Operating system. 
+- Click No if you are finished.  
+Click Finish.  
+
+From here you can eject your USB and/or boot into your new portable operating system.
+
+### Editing the Boot Menu
+
+You can edit the boot menu to change the auto start time or the selected system.
+
+![Yumi Boot Menu](https://www.pendrivelinux.com/wp-content/uploads/YUMI-Boot-Menu.png "Yumi Boot Menu")
+
+Open the USB flash drive and open the Multiboot folder
+Edit the syslinux.cfg file
+
+Change: 
+```
+LABEL Boot from first Hard Drive
+MENU LABEL Continue to Boot from ^First HD (default)
+KERNEL chain.c32
+APPEND hd1
+MENU DEFAULT
+
+label System Tools
+menu label System Tools ->
+MENU INDENT 1
+CONFIG /multiboot/menu/system.cfg
+```
+to
+```
+LABEL Boot from first Hard Drive
+MENU LABEL Continue to Boot from ^First HD
+KERNEL chain.c32
+APPEND hd1
+
+#start kali-linux-2016.2-amd64
+LABEL kali-linux-2016.2-amd64
+MENU LABEL kali-linux-2016.2-amd64
+CONFIG /multiboot/kali-linux-2016.2-amd64/isolinux/isolinux.cfg
+APPEND /multiboot/kali-linux-2016.2-amd64/isolinux
+#end kali-linux-2016.2-amd64
+MENU DEFAULT
+```
+This will select the kali-linux-2016.2-amd64 that I installed earlier.
+- You will need to modify this you what you installed. 
 
 
+  
+```
+```
+  
+
+[License](https://github.com/newCodez99/Using-Github/blob/master/LICENSE)
