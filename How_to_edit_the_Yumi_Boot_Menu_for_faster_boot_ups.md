@@ -41,7 +41,7 @@ APPEND /multiboot/kali-linux-2016.2-amd64/isolinux
 MENU DEFAULT
 ```
 
-This will select the kali-linux-2016.2-amd64 that I installed earlier.
+This will add the kali-linux-2016.2-amd64 that I installed earlier to the main menu and set it to default. It will also remove the old System Tools menu that it was currently under.  
 - You will need to modify `kali-linux-2016.2-amd64` to what you installed. 
 
 Save the `syslinux.cfg` file.  
