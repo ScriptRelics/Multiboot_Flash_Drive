@@ -23,7 +23,7 @@ Start with my guide - [How to install and configure a multiboot USB flash drive 
 
 
 
-
+[Back to the top. ⇧](../master/)  
 
   
 ```
