@@ -46,7 +46,9 @@ This will add the kali-linux-2016.2-amd64 that I installed earlier to the main m
 
 Save the `syslinux.cfg` file.  
 
-We will need to edit another file `/multiboot/kali-linux-2016.2-amd64/isolinux/live.cfg`  
+Next edit the `live.cfg` file to default on `Kali Linux with Persistence` when in the kali menu.  
+
+We will need to edit `/multiboot/kali-linux-2016.2-amd64/isolinux/live.cfg`  
 
 
 
@@ -142,7 +144,7 @@ Test your USB drive by booting into the Yumi Menu.
 
 ---
 
-[Back to the top. ⇧](../master/)  
+[Back to the top. ⇧](../master/How_to_edit_the_Yumi_Boot_Menu_for_faster_boot_ups.md#editing-the-boot-menu)  
 
   
 ```
