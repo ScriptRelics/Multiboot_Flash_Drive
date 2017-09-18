@@ -106,7 +106,7 @@ apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 Enjoy Kali.  
 
 
-Check out my Optional edits and tweaks [HERE](../).  
+Check out my Optional edits and tweaks [HERE](..).  
 
 
 
