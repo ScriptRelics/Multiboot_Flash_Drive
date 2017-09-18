@@ -94,6 +94,8 @@ mount /dev/sdb2 /mnt/MYUSB
 echo "/ union" > /mnt/MYUSB/persistence.conf
 #Unmount the drive.  
 umount /dev/sdb2 /mnt/MYUSB
+#Restart the system
+systemctl reboot  
 ```
 
 You are done, but I would suggest that you update the system.  
@@ -101,7 +103,7 @@ You are done, but I would suggest that you update the system.
 ```sh
 apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 ```
-- This will take a LONG time.  
+- This might take a LONG time.  
 
 Enjoy Kali.  
 
