@@ -105,9 +105,8 @@ apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 
 Enjoy Kali.  
 
-More info coming soon.  
-You may want to edit the boot menu. Check out my guide [HERE]().  
-Check out my Optional edits and tweaks [HERE]().  
+
+Check out my Optional edits and tweaks [HERE](../master/).  
 
 
 
