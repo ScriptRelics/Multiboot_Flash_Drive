@@ -1,18 +1,16 @@
 
 
+## Editing the YUMI Boot Menu
 
+Lets fix the YUMI boot menu to automatically select a Kali Linix  
 
-## Editing the Boot Menu
-
-Lets fix the boot menu to automatically select a Kali Linix  
-
-- I installed the kali-linux-2016.2-amd64 operating system but you may need to tweak some of the lines below for whatever you installed.  
+- I installed the kali-linux-2017.1-amd64 operating system but you may need to tweak some of the lines below for whatever you installed.  
 
 Open the USB flash drive and open the Multiboot folder  
 
-Edit the `syslinux.cfg` file.  
+Edit the `syslinux.cfg` file. `\multiboot\syslinux.cfg`  
 
-about 19 lines into the file, Change:  
+about 19 lines down, the File will have a default menu option to boot from hard drive AND a system tools menu link that looks like this:
 ```
 LABEL Boot from first Hard Drive
 MENU LABEL Continue to Boot from ^First HD (default)
@@ -25,37 +23,75 @@ menu label System Tools ->
 MENU INDENT 1
 CONFIG /multiboot/menu/system.cfg
 ```
-to
+
+Lets open the menu where the Kali link is hiding and move it to the main menu by opening the other `syslinux.cfg` file in the menu folder. `\multiboot\menu\syslinux.cfg` 
+
+Copy the kali menu link from `\multiboot\menu\syslinux.cfg` It should look like this:  
 ```
+#start kali-linux-2017.1-amd64
+LABEL kali-linux-2017.1-amd64
+MENU LABEL kali-linux-2017.1-amd64
+CONFIG /multiboot/kali-linux-2017.1-amd64/isolinux/isolinux.cfg
+APPEND /multiboot/kali-linux-2017.1-amd64/isolinux
+#end kali-linux-2017.1-amd64
+```
+Paste it ABOVE the boot to hard drive menu link and add the MENU DEFAULT under it.
+
+Now you should have a `\multiboot\syslinux.cfg` file with the menu items like this:  
+
+```
+#start kali-linux-2017.1-amd64
+LABEL kali-linux-2017.1-amd64
+MENU LABEL kali-linux-2017.1-amd64
+CONFIG /multiboot/kali-linux-2017.1-amd64/isolinux/isolinux.cfg
+APPEND /multiboot/kali-linux-2017.1-amd64/isolinux
+#end kali-linux-2017.1-amd64
+MENU DEFAULT
+
 LABEL Boot from first Hard Drive
 MENU LABEL Continue to Boot from ^First HD
 KERNEL chain.c32
 APPEND hd1
-
-#start kali-linux-2016.2-amd64
-LABEL kali-linux-2016.2-amd64
-MENU LABEL kali-linux-2016.2-amd64
-CONFIG /multiboot/kali-linux-2016.2-amd64/isolinux/isolinux.cfg
-APPEND /multiboot/kali-linux-2016.2-amd64/isolinux
-#end kali-linux-2016.2-amd64
-MENU DEFAULT
 ```
 
-This will add the kali-linux-2016.2-amd64 that I installed earlier to the main menu and set it to default. It will also remove the old System Tools menu that it was currently under.  
-- You will need to modify `kali-linux-2016.2-amd64` to what you installed. 
+Save the file and you are finished with the YUMI boot menu.  
 
-Save the `syslinux.cfg` file.  
+If you want to edit the background. Feel free to play with the 
 
-Next edit the `live.cfg` file to default on `Kali Linux with Persistence` when in the kali menu.  
+## Editing the Kali Boot Menu
 
-We will need to edit `/multiboot/kali-linux-2016.2-amd64/isolinux/live.cfg`  
+Now lets edit the Kali menu so it defaults to the `Kali Linux with Persistence` menu link.  
+
+Open the USB flash drive and open the Multiboot follder > kali-linux-2017.1-amd64 > isolinux Folder. `\multiboot\kali-linux-2017.1-amd64\isolinux`  
+
+We will need to edit the `live.cfg` file. `/multiboot/kali-linux-2016.2-amd64/isolinux/live.cfg`  
+
+The first item will have the `menu default` in it. Move it down to the `label live-persistence` menu area. Like this:  
+
+```
+label live-persistence
+    menu label ^Live USB Persistence              (check kali.org/prst)
+    menu default
+    linux /multiboot/kali-linux-2017.1-amd64/live/vmlinuz
+    initrd /multiboot/kali-linux-2017.1-amd64/live/initrd.img
+    append live-media-path=/multiboot/kali-linux-2017.1-amd64/live cdrom-detect/try-usb=true noprompt boot=live noconfig=sudo username=root hostname=kali persistence
+```
+
+Save the `live.cfg` file.  
+
+If you want to edit the background. Feel free to play with the `splash.png` file `\multiboot\kali-linux-2017.1-amd64\isolinux\splash.png`  
 
 
+Test your USB drive by booting into the Yumi Menu.  
 
 ---
 
+---
 
-Here is an old script that I made to make the changes.
+### Old Stuff
+
+Here is an old kali-linux-2016.2-amd64 script that I made to make the changes in linux.  
+
 
 ```sh
 
@@ -140,7 +176,7 @@ fi
 
 
 
-Test your USB drive by booting into the Yumi Menu.  
+
 
 ---
 
