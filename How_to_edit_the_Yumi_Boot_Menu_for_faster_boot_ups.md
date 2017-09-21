@@ -35,9 +35,11 @@ CONFIG /multiboot/kali-linux-2017.1-amd64/isolinux/isolinux.cfg
 APPEND /multiboot/kali-linux-2017.1-amd64/isolinux
 #end kali-linux-2017.1-amd64
 ```
-Paste it ABOVE the boot to hard drive menu link and add the MENU DEFAULT under it.
+Paste it ABOVE the boot to hard drive menu link in the main boot `\multiboot\syslinux.cfg` file. 
+Add the MENU DEFAULT under it.
+Remove the Tools menu link.  
 
-Now you should have a `\multiboot\syslinux.cfg` file with the menu items like this:  
+Now you should have a `\multiboot\syslinux.cfg` file with the menu items like this: 
 
 ```
 #start kali-linux-2017.1-amd64
