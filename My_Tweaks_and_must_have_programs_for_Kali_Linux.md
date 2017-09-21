@@ -73,3 +73,22 @@ apt-get clean && apt-get -y update && apt-get -y dist-upgrade
 sleep 1
 apt-get clean && apt -y autoremove
 ```
+
+
+
+
+
+
+
+
+
+
+[Back to the top. ⇧](../master/)  
+
+  
+```
+```
+  
+
+[License](https://github.com/newCodez99/Using-Github/blob/master/LICENSE)
+
