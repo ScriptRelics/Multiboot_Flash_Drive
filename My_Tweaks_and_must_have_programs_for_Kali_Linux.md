@@ -2,14 +2,40 @@
 
 ## My Tweaks and must have programs for Kali Linux
 
-So you have a fresh Kali installed on your USD flash drive. Lets tweak it a little.  
+So you have a fresh persistance enabled Kali Linux installed on your USD flash drive. Lets tweak it a little.  
 
-### Screen Saver
+### Setting Changes
 
-The very first thing you should do is turn off or change the time of the screen saver.  
+Lets open the main settings menu by selecting the down arrow in the top right hand corner of the screen.  
+
+Select the `Settings` icon to open the All Settings window.  
+
+#### Screen Saver
+
+The very first thing you should do is turn off the screen saver.  
 - We dont want the screen saver going off when we are updating things. 
 
-Go to the setting menu and and turn that thing off.
+Select the `Power` menu  
+
+Change the `Blank Screen` from 5 minuits to `Never`  
+
+Go back to the All Settings window and select the `Privacy` icon.  
+
+Change Screen Lock from ON to `OFF`  
+- This will open another menu to select `Automatic Screen Lock` to off.  
+
+Close the All Settings Windows.  
+
+### Apperance Tweaks
+
+Lets change more settings in another settings area.  
+
+From the Desktop, open to the Tweaks setting window by clicking on the `Tweak Tool` on docked bar.  
+
+go to the `Appearance` tab  
+
+Change the GTK+ to `Blackbird` for the Dark theam.  
+
 
 ### New Password
 
@@ -20,6 +46,8 @@ Open the terminal and type:
 ```
 passwd
 ```
+
+Set your new password.  
 
 ### Netwrok changes
 
