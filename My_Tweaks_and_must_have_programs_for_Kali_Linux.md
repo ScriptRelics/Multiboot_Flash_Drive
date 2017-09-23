@@ -38,24 +38,25 @@ Change the GTK+ to `Blackbird` for the Dark theme.
 
 ### Terminal Tweaks
 
-Open the Terminal. Lets change the information, color, and look of the terminal by configuring the Bash prompt. To do this we will need to edit the `.bashrc` file.  
+Open the Terminal. Lets change the information, color, and look of the terminal by configuring the Bash prompt. To do this we will need to edit the `.bashrc` file. `/root/.bashrc` 
 The .bashrc file is a shell script that runs every time you open a new shell.  
 
-I have a handy .bashrc file that can be viewed [HERE.]()  
-You are going to want to download it and overwrite it to the bashrc file. ****INLESS I FIND A BETTER WAY TO DO IT****
+I have a handy [.bashrc file that can be viewed HERE.](../master/.bashrc)  
+You are going to want to download it and overwrite it to the bashrc file. 
 
 ```
-#change to the Desktop
+#change directory to the Desktop - A good place to download to.
 cd /root/Desktop
 #Download the file
 wget https://raw.githubusercontent.com/newCodez99/Multiboot_Flash_Drive/master/.bashrc
-#replace it over the old .bashrc file
+#make a backup of the original .bashrc file just in case
+cp /root/.bashrc bashrc_backup
+#Paste our new .bashrc to the roof folder
 cp .bashrc /root/.bashrc
 #restart bash
 source ~/.bashrc
 ```
-
-
+You now have a TON of aliases and an updated command line.
 
 
 ### New Password

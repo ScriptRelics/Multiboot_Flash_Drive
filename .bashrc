@@ -44,16 +44,16 @@ UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
 read one five fifteen rest < /proc/loadavg
 
 echo "$(tput setaf 2)
-   .~~.   .~~.    `date +"%A, %e %B %Y, %X %Z"`
-  '. \ ' ' / .'   `uname -srmo`$(tput setaf 1)
-   .~ .~~~..~.
-  : .~.'~'.~. :   $FG_WHITE Uptime.............: ${UPTIME} $FG_RED
- ~ (   ) (   ) ~  $FG_WHITE Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total) $FG_RED
-( : '~'.~.'~' : ) $FG_WHITE Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min) $FG_RED
- ~ .~ (   ) ~. ~  $FG_WHITE Running Processes..: `ps ax | wc -l | tr -d " "` $FG_RED
-  (  : '~' :  )   $FG_WHITE CPU Temperature....:$FG_RED
-   '~ .~~~. ~'    $FG_WHITE Free Disk Space....: `df -Ph | grep -E '^/dev/root' | awk '{ print $4 " of " $2 }'` $FG_RED
-       '~'        $FG_WHITE IP Addresses.......: `ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{ print $2 }'` $FONT_RESET
+`date +"%A, %e %B %Y, %X %Z"`
+`uname -srmo`$(tput setaf 1)
+
+$FG_WHITE Uptime.............: ${UPTIME} $FG_RED
+$FG_WHITE Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total) $FG_RED
+$FG_WHITE Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min) $FG_RED
+$FG_WHITE Running Processes..: `ps ax | wc -l | tr -d " "` $FG_RED
+$FG_WHITE CPU Temperature....:$FG_RED
+$FG_WHITE Free Disk Space....: `df -Ph | grep -E '^/dev/root' | awk '{ print $4 " of " $2 }'` $FG_RED
+$FG_WHITE IP Addresses.......: `ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{ print $2 }'` $FONT_RESET
 
 $(tput sgr0)"
 
@@ -98,9 +98,10 @@ alias gr='git reflog'
 alias glf='git ls-files'
 
 
+#NEEDS FIXING
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -354,4 +355,7 @@ alias dirty_unpulled_symbol="▼"
 #PS1="\n#\[\`if [[ \$? = "0" ]]; then if [ $(jobs | wc -l ) -gt 0 ]; then echo '$FONT_BOLD$BG_GREEN jobs:\j $FONT_RESET$FONT_BOLD$FG_RED\u$FONT_RESET$FONT_BOLD@$BG_GREEN\h$FONT_RESET'; else echo '$FONT_BOLD$FG_RED\u$FONT_RESET$FONT_BOLD@$BG_GREEN\h$FONT_RESET'; fi else echo '$FONT_BOLD$FG_RED\u$FONT_RESET@$FONT_BOLD$BG_RED\h$FONT_RESET' ; fi\`:\w\n"
 
 
+echo "#Number of Jobs-User@Command Color: Path" 
+
+#(Number of jobs) if the last command was sucessful then display red name @ green highlight else display red name @ red highlight:(PATH)(NEW LINE)
 PS1="\n#\j \[\`if [[ \$? = "0" ]]; then echo '$FONT_BOLD$FG_RED\u$FONT_RESET$FONT_BOLD@$BG_GREEN\h$FONT_RESET'; else echo '$FONT_BOLD$FG_RED\u$FONT_RESET@$FONT_BOLD$BG_RED\h$FONT_RESET' ; fi\`:\w\n"
