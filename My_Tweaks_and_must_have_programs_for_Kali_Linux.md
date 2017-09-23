@@ -2,7 +2,7 @@
 
 ## My Tweaks and must have programs for Kali Linux
 
-So you have a fresh persistance enabled Kali Linux installed on your USD flash drive. Lets tweak it a little.  
+So you have a fresh persistence enabled Kali Linux installed on your USD flash drive. Lets tweak it a little.  
 
 ### Setting Changes
 
@@ -13,11 +13,11 @@ Select the `Settings` icon to open the All Settings window.
 #### Screen Saver
 
 The very first thing you should do is turn off the screen saver.  
-- We dont want the screen saver going off when we are updating things. 
+- We don't want the screen saver going off when we are updating things. 
 
 Select the `Power` menu  
 
-Change the `Blank Screen` from 5 minuits to `Never`  
+Change the `Blank Screen` from 5 minutes to `Never`  
 
 Go back to the All Settings window and select the `Privacy` icon.  
 
@@ -34,7 +34,21 @@ From the Desktop, open to the Tweaks setting window by clicking on the `Tweak To
 
 go to the `Appearance` tab  
 
-Change the GTK+ to `Blackbird` for the Dark theam.  
+Change the GTK+ to `Blackbird` for the Dark theme.  
+
+### Terminal Tweaks
+
+Open the Terminal. Lets change the information, color, and look of the terminal by configuring the Bash prompt. To do this we will need to edit the `.bashrc` file.  
+The .bashrc file is a shell script that runs every time you open a new shell.  
+
+I have a handy .bashrc file that can be viewed [HERE.]()  
+You are going to want to download it and overwrite it to the bashrc file. ****INLESS I FIND A BETTER WAY TO DO IT****
+
+```
+wget the .bashrc file info here****
+```
+
+
 
 
 ### New Password
@@ -75,6 +89,9 @@ service network-manager restart
 ```
 
 And just for fun, Lets enable auto MacChanger.  
+
+Edit the `/etc/default/macchanger` file and change the `ENABLE_ON_POST_UP_DOWN=false` to `true`  
+
 ```
 # Enable the auto Macchanger
 sed -i ' s/ENABLE_ON_POST_UP_DOWN=false/ENABLE_ON_POST_UP_DOWN=true/ ' /etc/default/macchanger
