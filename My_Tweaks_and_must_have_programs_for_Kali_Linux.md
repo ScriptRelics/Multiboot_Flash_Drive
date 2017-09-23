@@ -45,7 +45,14 @@ I have a handy .bashrc file that can be viewed [HERE.]()
 You are going to want to download it and overwrite it to the bashrc file. ****INLESS I FIND A BETTER WAY TO DO IT****
 
 ```
-wget the .bashrc file info here****
+#change to the Desktop
+cd /root/Desktop
+#Download the file
+wget https://raw.githubusercontent.com/newCodez99/Multiboot_Flash_Drive/master/.bashrc
+#replace it over the old .bashrc file
+cp .bashrc /root/.bashrc
+#restart bash
+source ~/.bashrc
 ```
 
 
