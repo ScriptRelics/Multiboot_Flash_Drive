@@ -122,12 +122,28 @@ firefox --new-tab https://extensions.gnome.org/extension/779/clipboard-indicator
 
 ### Update and Upgrade  
 
+Before installing any programs, Update.  
+
+- This might take some time.  
+- You should restart the system after everything has been updated.  
+
 ```
-apt-get clean && apt-get -y update && apt-get -y dist-upgrade
-sleep 1
-apt-get clean && apt -y autoremove
+#Clean cache then update then upgrade. 
+apt-get clean && apt-get -y update && apt-get -y upgrade
+# after the updates, clean and remove the junk. 
+apt-get clean && apt -y autoclean && apt -y autoremove
+#Restart
+systemctl reboot 
 ```
 
+
+### Install programs
+
+Check out these programs.  
+
+```
+
+```
 
 
 
