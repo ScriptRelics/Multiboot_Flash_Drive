@@ -58,9 +58,7 @@ $FG_WHITE IP Addresses.......: `ifconfig | grep 'inet ' | grep -v '127.0.0.1' | 
 $(tput sgr0)"
 
 
-alias ll='ls $LS_OPTIONS -lah'
-alias la='ls $LS_OPTIONS -lah'
-alias l='ls $LS_OPTIONS -Ap'
+
 
 alias dir="dir --color=auto"
 alias grep="grep --color=auto"
@@ -68,7 +66,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias dmesg='dmesg --color'
 
-alias ls='ls $LS_OPTIONS -Ap'         # Preferred ‘ls’ implementation
+alias ls='ls $LS_OPTIONS -Ap'               # Preferred ‘ls’ implementation
+alias ll='ls $LS_OPTIONS -lah'              # ls mods
+alias la='ls $LS_OPTIONS -lah'              # ls mods
+alias l='ls $LS_OPTIONS -Ap'                # ls mods
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation

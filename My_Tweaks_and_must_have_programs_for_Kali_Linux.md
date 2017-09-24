@@ -6,7 +6,7 @@ So you have a fresh persistence enabled Kali Linux installed on your USD flash d
 
 ### Setting Changes
 
-Lets open the main settings menu by selecting the down arrow in the top right hand corner of the screen.  
+Lets open the main settings menu by selecting the `down arrow` in the top right hand corner of the screen.  
 
 Select the `Settings` icon to open the All Settings window.  
 
@@ -38,25 +38,26 @@ Change the GTK+ to `Blackbird` for the Dark theme.
 
 ### Terminal Tweaks
 
-Open the Terminal. Lets change the information, color, and look of the terminal by configuring the Bash prompt. To do this we will need to edit the `.bashrc` file. `/root/.bashrc` 
+Open the Terminal. Lets change the information, color, and look of the terminal by configuring the Bash prompt.  To do this we will need to edit the `.bashrc` file. `/root/.bashrc`  
 The .bashrc file is a shell script that runs every time you open a new shell.  
 
-I have a handy [.bashrc file that can be viewed HERE.](../master/.bashrc)  
-You are going to want to download it and overwrite it to the bashrc file. 
+Try out my personal [.bashrc file that can be viewed HERE.](../master/.bashrc)  
+
+You are going to want to download it and overwrite your .bashrc file. 
 
 ```
 #change directory to the Desktop - A good place to download to.
 cd /root/Desktop
 #Download the file
 wget https://raw.githubusercontent.com/newCodez99/Multiboot_Flash_Drive/master/.bashrc
-#make a backup of the original .bashrc file just in case
+#make a backup of the original .bashrc file just in case you have the willys
 cp /root/.bashrc bashrc_backup
-#Paste our new .bashrc to the roof folder
+#Paste our new .bashrc to the root folder
 cp .bashrc /root/.bashrc
 #restart bash
 source ~/.bashrc
 ```
-You now have a TON of aliases and an updated command line.
+You now have a TON of handy aliases and an updated command line.
 
 
 ### New Password
@@ -136,7 +137,7 @@ apt-get clean && apt -y autoremove
 
 
 
-[Back to the top. ⇧](../master/)  
+[Back to the top. ⇧](../master/My_Tweaks_and_must_have_programs_for_Kali_Linux.md#my-tweaks-and-must-have-programs-for-kali-linux)  
 
   
 ```
