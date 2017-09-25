@@ -142,6 +142,9 @@ systemctl reboot
 Check out these programs.  
 
 ```
+#install VLC media player
+apt-get install vlc
+
 
 ```
 
