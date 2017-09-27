@@ -1,7 +1,7 @@
 
 
 
-# How to install an Operating system on a USB drive.  
+# How to install a Kali Operating system on a USB drive and tweak it.  
 
 
 [How to install and configure a multiboot USB flash drive with Kali Linux](../master/How_To_Install_And_Configure_A_Multiboot_Flash_Drive.md)
@@ -13,13 +13,6 @@
 
 
 
-
-
-
-
-
-
-[Back to the top. ⇧](../master/)  
 
   
 ```
