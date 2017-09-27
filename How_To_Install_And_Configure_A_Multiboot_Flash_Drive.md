@@ -83,7 +83,16 @@ This will take you to the Kali Menu. Select `Live USB Persistence`
 
 Finish the setup by mounting the persistence partition and join it to the conf file.
 
-Open a terminal and type:  
+First, find out what the USB device is called. Open the terminal and type:
+
+```
+fdisk -l
+```
+
+Look for the Multiboot USB device. My device was named sdb2 for this example. `/dev/sdb2`  
+- Your device might be labeled differently. Adjust the code below.
+
+In the terminal and type:  
 
 ```sh
 #Make a directory to mount to.  
@@ -101,7 +110,7 @@ systemctl reboot
 You are done, but I would suggest that you update the system.  
 
 ```sh
-apt-get clean && apt-get -y update  
+apt-get clean && apt-get -y update && apt-get -y upgrade  
 ```
 - This might take a LONG time.  
 
@@ -110,8 +119,7 @@ Enjoy Kali.
 
 Check out my Optional edits and tweaks [HERE](https://github.com/newCodez99/Multiboot_Flash_Drive).  
 
-Need more help? [Look at the Kali Linux guide](https://docs.kali.org/downloading/kali-linux-live-usb-persistence)
-
+Need more help? [Look at the official Kali Linux guide](https://docs.kali.org/downloading/kali-linux-live-usb-persistence)
 
 [Back to the top. ⇧](../master/How_To_Install_And_Configure_A_Multiboot_Flash_Drive.md#how-to-install-and-configure-a-multiboot-usb-flash-drive-with-kali-linux)  
 
