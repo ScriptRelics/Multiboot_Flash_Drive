@@ -45,7 +45,7 @@ Try out my personal [.bashrc file that can be viewed HERE.](../master/.bashrc)
 
 You are going to want to download it and overwrite your .bashrc file. 
 
-```
+```sh
 #change directory to the Desktop - A good place to download to.
 cd /root/Desktop
 #Download the file
@@ -66,7 +66,7 @@ Now change the root password. You have a powerful weapon, lets change the defaul
 
 Open the terminal and type:
 
-```
+```sh
 passwd
 ```
 
@@ -76,7 +76,7 @@ Set your new password.
 
 By default the network interfaces are down. Lets turn them on.
 
-```
+```sh
 # Add eth0 and wlan0 to interfaces for autostart
 cat > /etc/network/interfaces <<EOF
 auto lo
@@ -91,7 +91,7 @@ EOF
 
 Network Manager needs to manage the networks now that you added them to the interfaces file  
 
-```
+```sh
 # Set Network Manager management to true
 sed -i ' s/managed=false/managed=true/ ' /etc/NetworkManager/NetworkManager.conf
 service network-manager restart
@@ -101,7 +101,7 @@ And just for fun, Lets enable auto MacChanger.
 
 Edit the `/etc/default/macchanger` file and change the `ENABLE_ON_POST_UP_DOWN=false` to `true`  
 
-```
+```sh
 # Enable the auto Macchanger
 sed -i ' s/ENABLE_ON_POST_UP_DOWN=false/ENABLE_ON_POST_UP_DOWN=true/ ' /etc/default/macchanger
 ```
@@ -112,7 +112,7 @@ sed -i ' s/ENABLE_ON_POST_UP_DOWN=false/ENABLE_ON_POST_UP_DOWN=true/ ' /etc/defa
 Lets add some Firefox extensions.  
 - You will need to be connected the the internet first.  
 
-```
+```sh
 start firefox --new-tab https://extensions.gnome.org/extension/1031/topicons/
 firefox --new-tab https://extensions.gnome.org/extension/72/recent-items/
 firefox --new-tab https://extensions.gnome.org/extension/779/clipboard-indicator/
@@ -127,7 +127,7 @@ Before installing any programs, Update.
 - This might take some time.  
 - You should restart the system after everything has been updated.  
 
-```
+```sh
 #Clean cache then update then upgrade. 
 apt-get clean && apt-get -y update && apt-get -y upgrade
 # after the updates, clean and remove the junk. 
@@ -141,7 +141,7 @@ systemctl reboot
 
 Check out these programs.  
 
-```
+```sh
 #install VLC media player
 apt-get install vlc
 
