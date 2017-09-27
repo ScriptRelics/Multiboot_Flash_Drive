@@ -110,16 +110,18 @@ systemctl reboot
 You are done, but I would suggest that you update the system.  
 
 ```sh
+#clean then update then upgrade the updates
 apt-get clean && apt-get -y update && apt-get -y upgrade  
+#clean then clean some more then remove junk - *Hashtag* CleanFreak
+apt-get clean && apt -y autoclean && apt -y autoremove
 ```
 - This might take a LONG time.  
 
-Enjoy Kali.  
+Enjoy Kali. Check out my [optional edits and tweaks HERE.](https://github.com/newCodez99/Multiboot_Flash_Drive).  
 
+Need more help? [Look at the official Kali.org Linux guide.](https://docs.kali.org/downloading/kali-linux-live-usb-persistence)
 
-Check out my Optional edits and tweaks [HERE](https://github.com/newCodez99/Multiboot_Flash_Drive).  
-
-Need more help? [Look at the official Kali Linux guide](https://docs.kali.org/downloading/kali-linux-live-usb-persistence)
+Go [back to the Readme.](https://github.com/newCodez99/Multiboot_Flash_Drive#how-to-install-a-kali-operating-system-on-a-usb-drive-and-tweak-it)
 
 [Back to the top. ⇧](../master/How_To_Install_And_Configure_A_Multiboot_Flash_Drive.md#how-to-install-and-configure-a-multiboot-usb-flash-drive-with-kali-linux)  
 
